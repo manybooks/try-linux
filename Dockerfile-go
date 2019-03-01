@@ -1,0 +1,5 @@
+FROM golang:latest
+COPY . /go/src/try-linux
+WORKDIR /go/src/try-linux
+RUN apt-get update && apt-get install -y strace
+CMD ["/bin/bash"]
