@@ -1,4 +1,6 @@
 FROM ubuntu:18.04
 COPY . ./mnt
-RUN apt-get update && apt-get install -y strace
+RUN apt-get update
+	&& apt-get install -y strace
+	&& apt-get install -y gcc
 CMD ["/bin/bash"]
